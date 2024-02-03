@@ -1,0 +1,25 @@
+.places__wrap {
+    @include frame;
+    &__head {
+        @include frame_head;
+    }
+    &__content {
+        list-style-type: none;
+        .near__item {
+            margin-top: 10px;
+            background-color: $dark_violet;
+            border-radius: 5px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            align-items: center;
+            text-align: center;
+            font-size: 36px;
+            padding: 30px 200px;
+
+            .places__img {
+                width: 60px;
+            }
+
+        }
+    }
+}

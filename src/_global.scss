@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $violet_gradient;
+  font: {
+    family: $main_text;
+    weight: 400;
+  }
+  color: $white;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 32px;
+  text-transform: uppercase;
+}
+
+h2,
+p {
+  font-size: 24px;
+}
+
+a,
+button,
+input {
+  display: block;
+  text-decoration: none;
+  color: $white;
+}
+
+.wrapper__error {
+  background: {
+    image: url(../img/error_404.png);
+    color: $violet_gradient;
+    repeat: no-repeat;
+    size: 70vh;
+    position: center;
+  }
+  height: 100vh;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.btn--active {
+  background-color: $main_violet;
+}
+
+label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}

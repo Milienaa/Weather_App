@@ -1,0 +1,31 @@
+.hourly__wrap{
+    @include frame;
+    &__head {
+        @include frame_head;
+        @include add_text;
+    }
+    &__content{
+        list-style-type: none;
+        .item__first {
+            margin-top: 10px;
+            background-color: $medium_violet;
+            border-radius: 5px;
+        }
+        .item {
+            text-align: center;
+            align-items: center;
+            padding: 22px 0px;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: 1;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+            
+        }
+
+        .hourly__img {
+            width: 50px;
+            
+        }
+        
+    }
+}

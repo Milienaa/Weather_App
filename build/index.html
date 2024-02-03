@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Website</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header__wrap">
+        <div class="header__wrap1">
+          <div class="header__title">
+            <h1>Weather forecast</h1>
+          </div>
+          <form class="header__form">
+            <input class="header__form__field" type="text" value="Kyiv" />
+
+            <button type="submit" class="header__form__search">
+              <img src="img/search.svg" alt="" />
+            </button>
+          </form>
+        </div>
+        <div class="header__wrap2">
+          <label>
+            <input type="radio" name="forecast-type" value="today" checked />
+
+            <div class="btn btnToday btn--active">Today</div>
+          </label> 
+
+          <label>
+            <input type="radio" name="forecast-type" value="fifth-day" />
+
+            <div class="btn btnFifthDay">5-day</div>
+          </label>
+        </div>
+      </div>
+
+      <div class="wrapper__error" style="display: none"></div>
+
+      <div class="wrapper__content">
+        <!-- <div class="today__wrap"> -->
+        <!-- <div class="today__wrap__head">
+                    <div class="today__wrap__head__text">
+                        <h2>Today's Forecast -</h2>
+                        <p class="town">Kremenchuk, Ukraine</p>
+                    </div>
+                    <p class="current__date">13.10.2023</p>
+                </div>
+                <div class="today__wrap__content">
+                    <div class="forecast">
+                        <img class="today__img" src="img/mostly_sunny.svg" alt="">
+                        <p>Mostly sunny</p>
+                    </div>
+                    <div class="temp">
+                        <p class="temperature">9°</p>
+                        <p>feels like 9°</p>
+                    </div>
+                    <div class="sun">
+                        <div class="sun__item"><p class="sunrise">Sunrise </p><span>07:15 AM</span></div>
+                        <div class="sun__item"><p class="sunset">Sunset </p><span>06:20 PM</span></div>
+                        <div class="sun__item"><p class="duration">Duration </p><span>10:56 hr</span></div>
+                        
+                    </div>
+                </div> -->
+        <!-- </div> -->
+
+        <!-- <div class="fifthday__wrap" style="display: none"> -->
+        <!-- <div class="fifthday__wrap__head">
+                    <div class="day__week">
+                        <p class="day">Friday</p>
+                        <p class="date">Oct 13</p>
+                    </div>
+                    <div class="day__week">
+                        <p class="day">Satarday</p>
+                        <p class="date">Oct 14</p>
+                    </div>
+                    <div class="day__week">
+                        <p class="day">Sunday</p>
+                        <p class="date">Oct 15</p>
+                    </div>
+                    <div class="day__week">
+                        <p class="day">Monday</p>
+                        <p class="date">Oct 16</p>
+                    </div>
+                    <div class="day__week">
+                        <p class="day">Tuesday</p>
+                        <p class="date">Oct 17</p>
+                    </div>
+                </div>
+
+                <div class="fifthday__wrap__content">
+                    <div class="forecast forecast--active">
+                        <img class="fifthday__img" src="img/mostly_sunny.svg" alt="">
+                        <p class="celcius">9°</p>
+                        <p>Mostly sunny</p>
+                    </div>
+                    <div class="forecast">
+                        <img class="fifthday__img" src="img/mostly_sunny.svg" alt="">
+                        <p class="celcius">9°</p>
+                        <p>Mostly sunny</p>
+                    </div>
+                    <div class="forecast">
+                        <img class="fifthday__img" src="img/mostly_sunny.svg" alt="">
+                        <p class="celcius">9°</p>
+                        <p>Mostly sunny</p>
+                    </div>
+                    <div class="forecast">
+                        <img class="fifthday__img" src="img/mostly_sunny.svg" alt="">
+                        <p class="celcius">9°</p>
+                        <p>Mostly sunny</p>
+                    </div>
+                    <div class="forecast">
+                        <img class="fifthday__img" src="img/mostly_sunny.svg" alt="">
+                        <p class="celcius">9°</p>
+                        <p>Mostly sunny</p>
+                    </div>
+                </div> -->
+        <!-- </div> -->
+
+        <!-- <div class="hourly__wrap"> -->
+        <!-- <div class="hourly__wrap__head">
+                    <div class="hourly__wrap__head__text">
+                        <h2>Hourly -</h2>
+                        <p class="town">Kremenchuk, Ukraine</p>
+                    </div>
+                </div>
+                <ul class="hourly__wrap__content">
+                    <li class="item item__first">
+                        <p>Hour</p>
+                        <p>Forecast</p>
+                        <p>Temp (°C)</p>
+                        <p>Feels like</p>
+                        <p>Wind (km/h)</p>
+                    </li>
+                    <li class="item">
+                        <div class="hour">
+                            <p>12 AM</p>
+                        </div>
+                        <div class="forecast">
+                            <img class="hourly__img" src="img/partly_cloudy_night.svg" alt="">
+                            <p>Partly cloudy</p>
+                        </div>
+                        <div class="temp">
+                            <p>9°</p>
+                        </div>
+                        <div class="feels">
+                            <p>9°</p>
+                        </div>
+                        <div class="wind">
+                            <p>9 km/h</p>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="hour">
+                        <p>12 AM</p>
+                    </div>
+                    <div class="forecast">
+                        <img class="hourly__img" src="img/mostly_sunny.svg" alt="">
+                        <p>Partly cloudy</p>
+                    </div>
+                    <div class="temp">
+                        <p>9°</p>
+                    </div>
+                    <div class="feels">
+                        <p>9°</p>
+                    </div>
+                    <div class="wind">
+                        <p>9 km/h</p>
+                    </div></li>
+                    <li class="item">
+                        <div class="hour">
+                        <p>12 AM</p>
+                    </div>
+                    <div class="forecast">
+                        <img class="hourly__img" src="img/sunny.svg" alt="">
+                        <p>Partly cloudy</p>
+                    </div>
+                    <div class="temp">
+                        <p>9°</p>
+                    </div>
+                    <div class="feels">
+                        <p>9°</p>
+                    </div>
+                    <div class="wind">
+                        <p>9 km/h</p>
+                    </div></li>
+                </ul> -->
+        <!-- </div> -->
+
+        <!-- <div class="places__wrap"> -->
+        <!-- <div class="places__wrap__head">
+                    <p>Nearby places</p>
+                </div>
+                <ul class="places__wrap__content">
+                    <li class="near__item">
+                            <div class="hour">
+                            <p>Poltava</p>
+                        </div>
+                        <div class="forecast">
+                            <img class="places__img" src="img/sunny.svg" alt="">
+                            <p>Partly cloudy</p>
+                        </div>
+                        <div class="temp">
+                            <p>16°</p>
+                        </div>
+                    </li>
+                    <li class="near__item">
+                        
+                            <div class="hour">
+                            <p>Svitlovodsk</p>
+                        </div>
+                        <div class="forecast">
+                            <img class="places__img" src="img/partly_cloudy_night.svg" alt="">
+                            <p>Partly cloudy</p>
+                        </div>
+                        <div class="temp">
+                            <p>15°</p>
+                        </div>
+                    </li>
+                    <li class="near__item">
+                        
+                            <div class="hour">
+                            <p>Horishni plavni</p>
+                        </div>
+                        <div class="forecast">
+                            <img class="places__img" src="img/showers.svg" alt="">
+                            <p>Partly cloudy</p>
+                        </div>
+                        <div class="temp">
+                            <p>9°</p>
+                        </div>
+                    </li>
+                </ul> -->
+        <!-- </div> -->
+      </div>
+    </div>
+
+    <script src="script/app.js"></script>
+    <script>
+        const apiKey = '578eb033b4a168fd8ec697c98a9f45a0';
+        const weatherApp = new WeatherApp(apiKey).init();
+    </script>
+  </body>
+</html>

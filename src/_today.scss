@@ -1,0 +1,40 @@
+.today__wrap{
+   @include frame;
+
+    &__head {
+        @include frame_head;
+        @include add_text;
+        
+    }
+
+    &__content {
+        padding: 33px 202px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+            width: 100px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        .temperature {
+            text-align: center;
+            font-size: 64px;
+        }
+
+        .sun__item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            justify-content: space-between;
+        }
+
+        .sun__item span {
+            padding-left: 30px;
+        }
+    }
+}
